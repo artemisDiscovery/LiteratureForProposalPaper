@@ -1,0 +1,65 @@
+
+
+/* ControlTag Loader for eHealthCare acaf33ea-8e2a-458e-b6e2-b3f4d1bb66c2 */
+(function() {
+  // Twitter iOS client doesn't allocate enough memory for realtime segment processor, giving up for now.
+  if (/Twitter for iPhone/.test(window.navigator.userAgent || '')) {
+    return;
+  }
+
+  var debugging = /kxdebug/.test(location);
+  var log = function() {
+    // It's a flag, so if it's there, then it means debug.
+    debugging && window.console && console.log([].slice.call(arguments).join(' '));
+  };
+
+  var load = function(url, callback) {
+    log('Loading script from:', url);
+    var node = document.createElement('script');
+    node.async = true;  // This is just to be friendly.
+    node.src = url;
+
+    // Connect to both in case we're in older IE.
+    node.onload = node.onreadystatechange = function() {
+      var state = node.readyState;
+      if (!callback.done && (!state || /loaded|complete/.test(state))) {
+        log('Script loaded from:', url);
+        callback.done = true;  // Mark the callback, so we don't load it twice on accident.
+        callback();
+      }
+    };
+
+    // Fetch the first script element, so we can insert the
+    // controltag before it. There *must* be at least one
+    // script element, or this code would never be called
+    var sibling = document.getElementsByTagName('script')[0];
+    sibling.parentNode.insertBefore(node, sibling);
+  };
+
+  var config = {"app":{"name":"krux-scala-config-webservice","version":"3.1.0","schema_version":3},"confid":"KX65LDos","context_terms":[],"publisher":{"id":1857,"name":"eHealthCare","uuid":"acaf33ea-8e2a-458e-b6e2-b3f4d1bb66c2","version_bucket":"stable","version_hash":"3269b976cac0388f80dbfdb09d96a4e7"},"params":{"site_level_supertag_config":"site","recommend":false,"control_tag_pixel_throttle":100,"fingerprint":false,"capture_js_errors":true,"user_data_timing":"load","tag_source":false,"first_party_uid":false,"target_fingerprint":false,"context_terms":true,"dfp_premium":true,"control_tag_namespace":"ehealthcare"},"prioritized_segments":[],"realtime_segments":[],"services":{"userdata":"//userdata.krxd.net/userdata/get","stats":"//apiservices.krxd.net/stats","event":"//beacon.krxd.net/event.gif","set_optout":"//apiservices.krxd.net/consumer/optout","data":"//beacon.krxd.net/data.gif","userData":"//userdata.krxd.net/userdata/get","social":"//beacon.krxd.net/social.gif","pixel":"//beacon.krxd.net/pixel.gif","um":"//apiservices.krxd.net/um","connector":"//connector.krxd.net/content_connector","is_optout":"//beacon.krxd.net/optout_check","impression":"//beacon.krxd.net/ad_impression.gif","log":"//jslog.krxd.net/jslog.gif","set_optin":"//apiservices.krxd.net/consumer/optin"},"site":{"id":464792,"name":"ehs.pro.ada.diabetes"},"tags":[{"id":17602,"name":"MediaMath User Match Pixel","content":"<script type='text/javascript' \n        src='//pixel.mathtag.com/sync/js?sync=auto'>\n</script>","target":null,"target_action":"append","timing":"asap","method":"document","internal":true,"criteria":["and",["and",["or",["<=","$frequency",3]]]]},{"id":7935,"name":"Appnexus Connect","content":"<script>\n(function(){\n        var kuid = Krux('get', 'user');\n        if (kuid) {\n            var prefix = location.protocol == 'https:' ? \"https:\" : \"http:\";\n            var kurl = prefix + '//beacon.krxd.net/usermatch.gif?adnxs_uid=$UID';\n            var appnexus_url = '//ib.adnxs.com/getuid?' + kurl\n            var i = new Image();\n            i.src = appnexus_url;\n        }\n})();\n</script>","target":null,"target_action":"append","timing":"asap","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",1]]]]},{"id":7936,"name":"Videology User Match","content":"<script type=\"text/javascript\">\n(function() {\n    (new Image()).src = '//sync.tidaltv.com/genericusersync.ashx?dpid=395';\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",1]]]]},{"id":7937,"name":"Jivox User Match","content":"<script>\n(function(){\nvar prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\nvar url = prefix + '//as.jivox.com/dsync/usersync.php?partnerId=krux&redirect='+encodeURIComponent(prefix)+'%2F%2Fbeacon.krxd.net%2Fusermatch.gif%3Fpartner%3Djivox%26partner_uid%3D%25JVX_UUID%25';\n(new Image()).src = url;\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",1]]]]},{"id":7799,"name":"Google User Match","content":"<script>\n(function(){\n  var kuid = Krux('get', 'user');\n  if (kuid && typeof kuid != 'undefined') {\n      var prefix = location.protocol == 'https:' ? \"https:\" :\"http:\";\n      var r_url = prefix + '//cm.g.doubleclick.net/pixel'\n      var kurl = prefix + '//apiservices.krxd.net/um?partner=google&r=' + r_url;\n      var i = new Image();\n      i.src = kurl;\n  }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["or",["<=","$frequency",3]]]]},{"id":17836,"name":"Krux DTC Datalayer All Sites","content":"<script>\nvar userKeys = 'rprof,vprof,rms1,vms1,rss1,vsrc,z3,eid,rcat,rcon1',\n    omitKeys = 'undefined',\n    config = {};\nif (userKeys) config.userKeys = userKeys.split(',');\nif (omitKeys) config.omitKeys = omitKeys.split(',');\nconfig.omitKeys = config.omitKeys || [];\nconfig.omitKeys.push(/gtm\\./);\nKrux('ingestDataLayer', ehs_krxargs, config);\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":[]},{"id":7878,"name":"DataLogix","content":"<script>\n    (function() {\n        var kuid = Krux('get', 'user');\n        if (kuid) {\n            var prefix = location.protocol == 'https:' ? \"https:\" : \"http:\";\n            var kurl_params = encodeURIComponent(\"_kuid=\" + kuid + \"&_kdpid=2dd640a6-6ebd-4d4f-af30-af8baa441a0d&dlxid=<na_id>&dlxdata=<na_da>\");\n            var kurl = prefix + \"//beacon.krxd.net/data.gif?\" + kurl_params;\n            var dlx_url = '//r.nexac.com/e/getdata.xgi?dt=br&pkey=gpwn29rvapq62&ru=' + kurl;\n            var i = new Image();\n            i.src = dlx_url;\n        }\n    })();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["or",["<=","$frequency",3]]]]},{"id":7879,"name":"Acxiom S2S","content":"<script>\n(function(){\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n      var liveramp_url = 'https://idsync.rlcdn.com/379708.gif?partner_uid=' + kuid;\n      var i = new Image();\n      i.src = liveramp_url;      \n  }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["or",["<=","$frequency",3]]]]},{"id":7880,"name":"eXelate Media","content":"<script>\n(function(){\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n    Krux('require:http').pixel({\n      url: \"//loadm.exelator.com/load\",\n      data: {\n          _kdpid: 'e4942ff0-4070-4896-a7ef-e6a5a30ce9f9',\n          buid: kuid,\n          p: '204',\n          g: '270',\n          j: '0'\n      }});\n  }\n  })();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["or",["<=","$frequency",3]]]]},{"id":7881,"name":"IXI Digital Open Market","content":"<script>\n  Krux('require:http').pixel({\n    url: \"//s.ixiaa.com/digi/C726AB29-0470-440B-B8D2-D552CED3A3DC/a.gif\"\n  });\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["or",["<=","$frequency",3]]]]},{"id":7882,"name":"Neustar AdAdvisor S2S","content":"<img src=\"//adadvisor.net/adscores/g.js?sid=9212244187&_kdpid=2111c0af-fc3a-446f-ab07-63aa74fbde8e\" />","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["or",["<=","$frequency",3]]]]},{"id":7930,"name":"Yahoo! DataX User Match","content":"<script>\n(function(){\n    var kuid = Krux('get', 'user');\n        if (kuid) {\n            var prefix = 'https:';\n            var rurl = prefix + '//cms.analytics.yahoo.com/cms?partner_id=KRUX';\n            var i = new Image();\n            i.src = rurl;\n        }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":[]},{"id":7931,"name":"LiveRamp User Matching","content":"<script>\n(function(){\n  var kuid = Krux('get', 'user');\n  if (kuid) {\n      var liveramp_url = 'https://idsync.rlcdn.com/379708.gif?partner_uid=' + kuid;\n      var i = new Image();\n      i.src = liveramp_url;     \n  }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",1]]]]},{"id":7933,"name":"TheTradeDesk User Match","content":"<script>\n(function()\n{ var i = new Image(); i.src = '//match.adsrvr.org/track/cmf/generic?ttd_pid=krux&ttd_tpi=1'; }\n)();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",1]]]]},{"id":7934,"name":"Brightroll User Match","content":"<script>\n(function(){\n        var kuid = Krux('get', 'user');\n        var prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';\n        if (kuid) {\n           var url = prefix + '//pix.btrll.com/partner/868092.png';\n           (new Image()).src = url;\n        }\n})();\n</script>","target":null,"target_action":"append","timing":"onload","method":"document","internal":true,"criteria":["and",["and",["and",["<=","$frequency",1]]]]},{"id":7798,"name":"Krux DTC Standard","content":"<script>\n(function(){\n\tKrux('scrape',{'page_attr_url_path_1':{'url_path':'1'}});\n\tKrux('scrape',{'page_attr_url_path_2':{'url_path':'2'}});\n\tKrux('scrape',{'page_attr_url_path_3':{'url_path':'3'}});\n\tKrux('scrape',{'page_attr_meta_keywords':{meta_name:'keywords'}});\n\tKrux('scrape',{'page_attr_domain':{url_domain: '2'}});\n})();\n</script>","target":null,"target_action":"append","timing":"onready","method":"document","internal":true,"criteria":[]}]};
+
+  // Wrap in a function and comment, then toString the func and replace
+  // everything that's not the beginning or end of a JSON object, so we get a
+  // string that's either empty or JSON.
+  var esiGeo = String(function(){/*
+   <esi:include src="/geoip_esi"/>
+   */}).replace(/^.*\/\*[^{]+|[^}]+\*\/.*$/g, '');
+
+  if (esiGeo) {
+    log('Got a request for:', esiGeo, 'adding geo to config.');
+    try {
+      config.geo = window.JSON.parse(esiGeo);
+    } catch (__) {
+      // Couldn't parse, so setting to {}
+      log('Unable to parse geo from:', config.geo);
+      config.geo = {};
+    }
+  }
+
+  
+
+  load('//cdn.krxd.net/ctjs/controltag.js.3269b976cac0388f80dbfdb09d96a4e7', function() {
+    log('Loading krux configuration.');
+    Krux('config', config);
+  });
+})();

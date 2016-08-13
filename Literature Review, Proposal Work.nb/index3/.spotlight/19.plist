@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>keywords</key>
+	<string></string>
+	<key>txt</key>
+	<string>TGF-beta Pathway Kind of old review (1997) but I will start with it - Pepper, 'TGF-beta: Vasculogenesis, Angiogenesis, Vessel Wall Integrity'
+
+A basic idea - while TGF-beta is thought of as 'anti proliferative', this cytokine can recruit inflammatory cells, or activate connective tissue, and these cells are then responsible for inducing angiogenesis. TGF-beta has been shown to increase levels of 
+	VEGF, 
+	PDGF, 
+	bFGF, 
+	TNF-alph 
+(but wait, the review says 'in vitro', so how would this 'indirect' method operate??)
+
+According to this review, TGF-beta UP regulates
+	fibronectin
+	collagens I, IV and V
+	thrombospondin
+	SPARC (??)
+	Integrin subunits alpha 2,5,v and Beta 1, 3
+	Proteases and inhibitors (uPA, PAI-1 (??))
+	endothelin
+	PDGF-A,B
+	alpha-SM actin (alpha smooth muscle actin)
+
+DOWN regulates
+	Integrin subunits alpha 3,5,6 Beta 1,3	
+	uPA, TIMP-1
+	E-selectin
+	thromobomodulin
+	Gro-alpha
+	MCP-1
+	von Willebrand factor (?)
+	VEGFR-2
+
+Lots of apparent contradiction in the paper, I guess expected given the complexity of the processes. For example, TGF-beta is 'anti proliferative' for endothelial cells, but is requires for maturation and stability of new blood vessels. Thus, the role of the cytokine depends on the stage (initialization or maturation). 
+
+
+ TGF-beta1 prevents Retinal insult induced by amyloid Beta
+
+ TGF-beta and the tumor microenvironment
+
+Not about eye, but lots of basic biology
+
+TGFbeta binds to TGFBR2 first, with differential affinity for different ligands. TGFB1 (also called ALK5) and TGFBR3 are then recruited to complex. 
+
+In canonical pathway, TGFBR complex phosphorylates SMAD2/3, and complex combines with SMAD4 to translocate to nuclease
+
+In non canonical pathway, TGFbeta binding activates
+	PI3K-AKT
+	RHOA
+	MAPK 
+pathways
+
+Activated pathways in epithelial cells lead to suppression of cell proliferation or induction of cell invasion/migration (aren't those very different??)
+
+The 'cytostatic' phenotype can involve
+	repression of MYC and CDK4 (cyclin dependent kinase)
+	likewise expression of CDK inhibitors
+		p21 aka CIP1, encoded by CDKN1A
+		INK4B aka p15
+
+	Expression of Krueppel-like factor 10 aka TIEG1
+		DAPK1 (death-assoc kinase)
+		BIM aka BCL2L11, BCL-2 mediating protein (pro-apoptotic)
+
+The epithelial-mesenchyme transition (EMT) is also triggered by TGFbeta, of this phenotype:
+
+	ID1 is down regulated by TGFbeta, leads to reduced 
+		E-cadherin 
+		ZO1 aka TJP1, Zona occludes 1 (both help maintain epithelial type)
+
+	Transcription factors that are UP regulated by TGF bets and involved in EMT:
+		SNAI1
+		SNAI2 (snail zinc-finger proteins)
+		ZEB1 &amp; ZEB2 (zinc finger homeobox)
+		LEF1 (lymphoid enhancing factor)
+
+	Noncanonical pathways activated, also important for EMT :
+		RHO-ROCK1
+		AKT
+
+So dichotomous role - suppression of cell proliferate (i.e, tumour suppression), OR induction of cell migration and invasion, as in late-stage tumours. 
+
+TGFbeta can be involved in TGFBR-independent up regulation of MMPs (matrix metalloproteinases) which increases angiogenesis. 
+
+MicroRNA expression is also effected by TGFbeta signaling:
+	mir-34A can be inhibited, induces expression of CCL22, recruit regulatory
+		T cells
+	SMAD3 / DDX5 (part of DROSHA complex) increases expr of
+		mir-21, alters contractive properties of vascular smooth muscle cells
+	Increase expr of mir-29A , increases induction of angiogenesis 
+	mir-29A targets 
+		PTEN mRNA, increases activation of 
+			AKT pathway
+	mir-494 increased,
+		PTEN reduced as a result, AKT activated, increase as a result of
+			MMP2, MMP13, MMP14, increased tumor cell invasion
+
+TGFbeta signaling shown to up regulate
+
+	COL1A1
+	COL4A1 (collagens)
+	MMP2
+	MMP9
+	LOXL4 (matrix metalloproteinases, lysl oxidase homologue 4)
+	All ECM or ECM-modifiying
+
+	VEGFA
+	Thrombospondin 1
+		both unregulated, pro-angiogenic
+
+In tumor progression, there is a loss of response to TGFbeta signaling, which leads to increased cell proliferation. Also, stroma cells retain sensitivity to TGFbeta, and changes to those cells can lead to increased invasiveness
+
+TGFbeta well known to activate fibroblasts, and induce ECM remodeling, collagen deposition
+
+Table 1 gives the lowdown on this for fibroblasts (NOTE that it indicates Collagen IV decrease, contradicting earlier statement, or is this just another complexity??)
+
+￼
+
+
+Innate immune system is suppressed by TGFbeta - part of this is INDUCTION of iNOS, contrary to what was stated for fibroblasts, so the effects of TGFbeta are clearly (?) cell-type specific.  Lots gf complex stuff on involvement of TGFbeta in T cell maturation, etc. 
+
+This interesting table about inhibitors of TGFbeta:
+
+￼
+ </string>
+</dict>
+</plist>

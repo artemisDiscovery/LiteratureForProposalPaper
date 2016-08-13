@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>keywords</key>
+	<string></string>
+	<key>txt</key>
+	<string>Blood-Retinal Barrier Breakdown Review:Molecular basis of the inner blood-retinal barrier and its breakdown in diabetic macular edema and other pathological conditions (2013)
+
+￼
+
+Two mechanisms for transport across endothelial layer of retinal capillaries:
+
+The paracellular route restricts passage of solutes larger than 3 nm in radius and is the preferred pathway for water and small water-soluble compounds
+Inter- endothelial cell junctions are complexes consisting of tight junc- tions, adherens junctions and gap junctions
+3.1.2. The transcellular pathway: endothelial transcytosis
+Transcytosis, a concept first introduced by Nicolae Simionescu (1979), is the transport of molecules across endothelial cells via specialized plasmalemmal vesicles, now termed caveolae.
+
+
+
+
+Proteins involved in transcellular pathway include 
+
+	caveolin-1 (structural component)
+	trafficking controlled by
+		VAMP-2 (vesicle-associated membrane protein)
+		NSF
+		SNAP-25
+		PLVAP
+
+Growth factors involved in BRB loss:
+
+VEGF-A
+TGF-Beta
+PDGF (platelet-derived growth factor) - knockout less to reduced pericyte
+	coverage and vascular abnormalities
+
+TGF-Beta is complex case, as systemic inhibition of TGF-beta leads to vascular leakage (indicating protective role), but can also increase permeability in vitro through 
+
+	MMP9
+	SMAD2 - mediated activation of 
+	RhoA
+
+PKC-Beta is downstream mediator of VEGF, implicated in vascular permeability
+
+
+Hypoxia is involved in BRB breakdown 
+
+	HIF-1 hypoxia-inducible factor, TF involved with 
+		VEGF
+		GLUT1 (glucose transporter)
+		EPO-1
+		GAPDH
+
+
+
+TNF-alpha is a potential target for preventing BRB breakdown (why?)
+
+Molecular mechanisms of tight junction loss (paracellular permeability):
+	Occludin
+	claudin-5
+		both down regulated when VEGF introduced as model of diabetic
+		retinopathy in rat eye; VEGF activates downstream proteins incl
+		PKC and src-family kinases, leads to ubiquitiniation and loss of 
+		occludin
+
+Molecular mechanisms of adherens junction loss:
+
+	VE-cadherin and beta-catenin are down-regulated by VEGF.
+		(HOWEVER, increased phosphorylation/degradation of these proteins
+		can lead to permeability, not just decreased expression)
+	PEDF inibits VEGF-induced permeability
+
+Molecular mechanism of transcytosis contribution to permeability
+	CAV-1 upregulstion (incl by VEGF)
+	PLVAP/PV-1 strongly assoc with permeability
+	ANG-2 also (induces migration of pericytes)
+
+	so here is more detailed story based on Fig.10 in paper: Angiopoeitin 1 is produced by pericytes, binds to TIE-2 receptor in endothelial cell, leads to tightening of tight junctions and adherens junctions and production of PDGF-beta , which leads to tightening of adhesion contacts between pericytes and endothelial cells. Ang-2 can compete with Ang-1, but does NOT activate TIE-2; result is that tight junctions are loosened, PDGF-beta is down regulated, pericytes may detach, VE cadherin is phosphorylated and internalized, increased vascular permeability. 
+
+TGF-beta is unregulated by pericyte-endothelial interaction, acts to increase BRB integrity
+
+Extracellular matrix protein production is increased in BRB breakdown, such 
+	collagen IV
+	laminin-beta,gamma	
+	fibronectin
+as well as pro-fibrotic proteins 
+	CTGF
+	TIMP-1
+
+Glial cells in pathology can activate and over express VEGF, MMPs and TNF-alpha, inducing angiogenesis
+
+ </string>
+</dict>
+</plist>

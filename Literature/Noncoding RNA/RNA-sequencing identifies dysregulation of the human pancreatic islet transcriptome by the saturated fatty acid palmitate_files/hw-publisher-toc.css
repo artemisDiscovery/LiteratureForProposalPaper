@@ -1,0 +1,406 @@
+
+/**********************************************************
+ * Sidebar
+ **********************************************************/
+
+#col-2 div.toc-navigation  ol, #col-2 div.toc-navigation li {
+	list-style: none;
+	margin: 0px;
+}
+
+#col-2 div.toc-navigation h4 {
+	margin-bottom: 0.7em;
+}
+
+#col-2 div.toc-navigation .issue-sections li {
+	margin: 0.4em 0px;
+}
+
+/* This is to get around a nasty IE bug where it inserts extra whitespace above nested lists.  */
+#col-2 div.toc-navigation ol  li.issue-sub-sections {
+	display: inline;	
+}
+ 
+ 
+#col-2 div.toc-navigation ol ol {
+	margin-left: 7%; 
+	display: block;
+}
+
+#col-2 div.toc-navigation .content-box-section {
+	font-weight: bold;
+}
+
+/**********************************************************
+ * top-of-TOC area styles
+ **********************************************************/
+div.section-break {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    border-bottom: none;
+    /*margin-top: 265px;*/
+}
+#toc-header a {
+    color: #660033;
+}
+
+#toc-header h1 {
+/*    font-family: Georgia, 'Times New Roman', serif;*/
+    font-weight: normal;
+    margin-bottom: .4em;
+}
+
+/* Reset margin/padding on ALL elements in the two floated columns.
+   Appropriate margins will be added back in on a case-by-case basis. This is
+   to normalize the handling across browsers (specifically to FIX IE).  */
+div.issue-col-left,
+div.issue-col-right,
+.issue-col-right *,
+.issue-col-left * {
+        margin: 0px;
+        padding: 0px;
+}
+
+/* this left column is fixed width to hold the cover image and prev/next issue links */
+/* cover:  width=134 height=178 */
+div.issue-col-left {
+        float: left;
+        margin-top: 15px;
+        height: 230px;
+        width: 195px;
+        clear: none;
+}
+ssue-col-left img {
+        margin: 0 0 0 20px;
+        position: static;
+}
+
+.prev-next li {
+        display: inline;
+}
+.issue-col-left .prev-next li a {
+        position: absolute;
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        height: 40px;
+}
+.issue-col-left .prev-next a:hover {
+        background-position: top left;
+
+}
+.issue-col-left .prev-next li.prev-link a {
+        background-image: url(../icons/toc/previous2.gif);
+        width: 98px;
+        left: 0px;
+}
+.issue-col-left .prev-next li.next-link a {
+        background-image: url(../icons/toc/next2.gif);
+        width: 76px;
+        left: 98px;
+}
+div.issue-col-right {
+        float:right;
+        margin: 15px 0 0 0;
+        min-height: 225px;
+        padding: 0px;
+        width: 317px;
+        clear: none;
+}
+
+div#toc-header {
+    position: relative;
+    width: 516px;
+     margin: 15px 0px 0px;
+}
+
+div#toc-header cite {
+    font-style: normal;
+    font-size: .8em;
+}
+
+div#toc-header .toc-links {
+    padding: 0.5em 0em;
+}
+
+div#toc-header .toc-links li {
+    background-image:url(../../shared/img/misc/rightchevron.gif);
+    background-position:0pt center;
+    background-repeat:no-repeat;
+    font-size: .8em;
+    display: inline;
+    white-space: normal;
+    margin-left: 0px;
+    padding-left: 9px;
+}
+
+div#toc-header .toc-links li a {
+    color: #660033;
+}
+}
+
+/** toc jumplist: 3 columns floating elements **/
+
+/* navigational header is hidden on visual browsers: */
+.toc-jumplist p {
+	position: absolute;
+	left: -9999px;
+}
+ul.jumplist-col {
+	width: 32%;
+	list-style: none;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	color: #003333;
+}
+/* major section headings in jumplist */
+.jumplist-col li.major-section {
+	font-size: 1em;
+	font-weight: bold;
+}
+/* minor section headings in jumplist */
+.jumplist-col li {
+	font-size: .9em;
+	margin: 1em 5%;
+}
+/* major headers have jump icons next to the list entry */
+.jumplist-col li a {
+	padding-left: 16px;
+}
+.jumplist-col li.major-section a {
+	padding-left: 16px;
+	background-image: url(../icons/toc/dwnarrow.gif);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+}
+
+form.issue-search label {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: .5em;
+}
+div.toc-instructions {
+	clear: both;
+	margin: 0px;
+	padding: 1.2em;
+	border: 1px solid #660033;
+	color: #660033;
+	margin-bottom: 1.5em;
+}
+.toc-instructions p,
+.toc-instructions h3 {
+	margin: 0px;
+	padding: 0px;
+	line-height: 1.4;
+}
+.toc-instructions h3 {
+	margin-bottom: .6em;
+	font-size: 1.1em;
+}
+.toc-instructions em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+/**********************************************************
+ * citation styles
+ **********************************************************/
+
+.toc-level * {
+	margin: 0px; padding: 0px;
+}
+.toc-level ul,
+.toc-level ol {
+	list-style: none;
+}
+.toc-level {
+	display: block;
+	clear: both;
+	padding-top: .5em;
+	margin-top: 1.5em;
+	border-top: 1px solid #660033;
+}
+/* handle major/minor section headers */
+.toc-level h2,
+.toc-level h3 {
+	display: inline;
+	font-weight: bold;
+}
+.toc-level h2 {
+	font-size: 1.2em;
+}
+.toc-level h3 {
+	font-size: 1em;
+}
+.toc-level a.toc-section-return {
+	padding-left: 16px;
+	background-image: url(../icons/toc/uparrow.gif);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+	color: #003333;
+}
+.toc-level .level2 {
+	margin-top: .5em;
+	border-top: none;
+}
+.level2 a.toc-section-return {
+	padding-left: 0em;
+	font-size: 1.1em;
+	color: #996600;
+	font-style: italic;
+	text-decoration: none;
+	background-image: none;
+}
+/* styling for individual citation records (list items) */
+.toc-cit {
+	display: block;
+	margin-top: .7em;
+	padding: .5em .3em;
+	color: #222222;
+	width: 512px;
+	clear:both;
+}
+.toc-cit * {
+	display: inline;
+}
+/* hide form label from toc display- but move offscreen so still available for accessibility */
+.toc-cit .cit-form-select label {
+	position: absolute;
+	left: -9999px;
+}
+.toc-cit .gca-checkbox {
+	padding: .5em;
+}
+/* hide section name from toc display */
+.toc-cit .cit-metadata .cit-section {
+	display: none;
+}
+
+div.cit-metadata span.cit-issue,
+div.cit-metadata span.cit-online-issn {
+	display:none;
+}
+div.ref-list div.cit-metadata span.cit-issue {
+	display: inline;
+}
+.toc-cit.fromcover {
+	background-color: #FFFFFF;
+}
+
+.toc-cit.openaccess {
+	background-color: #FFFFFF;
+}
+.toc-cit.inaugural {
+	background-color: #FFFFFF;
+}
+.toc-cit .cit-metadata h4,
+.toc-cit .cit-metadata .cit-title-note {
+	display: block;
+	color: #111111;
+	font-size: 1em;
+	font-weight: bolder;
+	margin-top: .2em;
+	padding-left: 3em;
+}
+.toc-cit .cit-auth-list li .cit-auth {
+	white-space: normal;
+}
+.toc-cit cite {
+	display: block;
+	font-style: normal;
+	margin-top: .25em;
+	padding-left: 3em;
+}
+.toc-cit .cit-metadata abbr.cit-jnl-abbrev {
+	border: none;
+}
+
+
+/* handle links */
+.toc-cit a {
+	color: #660033;
+	text-decoration: none;
+}
+.toc-cit a:hover {
+	color: #660033;
+	text-decoration: underline;
+}
+.toc-cit a:visited {
+	color: #660033;
+}
+
+/* move view list to own line, space appropriately */
+.toc-cit .cit-views {
+	display: block;
+	margin-top: .25em;
+	margin-bottom: .25em;
+	/*padding-left: 3em;*/
+	padding-left: 2.5em;
+}
+.toc-cit .cit-views li a {
+	padding-left: 9px;
+	background-image: url(../../shared/img/misc/rightchevron.gif);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+}
+.toc-cit .cit-views li {
+	padding-left: .5em;
+}
+
+/* provide spacing between views and access indicator */
+/*
+.toc-cit .open-access-indicator {
+	padding-left: 3em;
+	margin-left: .5em;
+	padding-top: .4em;
+	font-size: .9em;
+	font-weight: bold;
+	color: #F88A00;
+	text-transform: uppercase;
+}
+*/
+
+.gca-buttons {
+	margin-top: 1.5em;
+}
+
+#content-block form .cit-list .cit .cit-metadata .cit-auth-list {
+    padding-left: 10px;
+    display: block;
+}
+
+#content-block ul.toc-banner-ads  {
+        list-style-type: none;
+        list-style-image: none;
+        margin:0em;
+        padding:0em;
+}
+
+
+#content-block ul.toc-banner-ads li  img{
+        display: block;
+        margin-top: 0em;
+        margin-bottom: 0.5em;
+        margin-right:auto;
+        margin-left:auto;
+        padding:0px
+}
+
+span.cit-flags {
+float:left;
+}
+
+.toc-cit.openaccess .cit-views {
+float:none;
+}
+#pageid-content #content-block .retraction-alert {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#content-block .retraction-alert a {
+    color: #940E02;
+}

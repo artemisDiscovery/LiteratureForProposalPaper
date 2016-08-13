@@ -1,0 +1,101 @@
+
+SLIDE 1
+
+Today we know that the genome is not 'junk' - most of the genome is now believed to be actively expressed, at least in a particular tissue or stage of development. Most of those expressed transcripts do not code for proteins. 
+
+Long noncoding RNAs, or lncRNAs, are increasingly recognized as important factors in modulating gene expression. They are often highly tissue specific, their expression is affected by disease state, and they exert influence by a number of mechanisms, including the regulation of epigenetic modifications. 
+
+SLIDE 2
+
+This illustrates just a couple of the regulatory mechanisms of lncRNAs. The top picture shows a a trans mechanism, where the lncRNA forms a complex with proteins. The lncRNA acts to guide the complex to recognition sequences, where the complex modifies chromatin and regulates gene expression. 
+
+The bottom picture illustrates a cis mode of regulation. Here a lncRNA gene and protein coding gene are in close association on opposite strands of the genomic DNA. They are transcribed in opposite directions from a common promoter region, with the lncRNA expression potentially modulating that of the coding gene. I stress that there is evidence of tremendous diversity in the ways that lncRNAs function, and here we are highlighting two that are important for this talk.
+
+SLIDE 3
+
+In this study we look at differential expression of lincRNAs between normal eyes and eyes afflicted with age-related macular degeneration. This summarizes the samples used. There were a total of 15 eyes, and 26 samples which were taken from either peripheral retina (or PR), or from peripheral retinal epithelium, choroid and sclera (which I abbreviate PRCS). The AMD eyes were also classified by disease stage, either early onset, geographical or neovascularized. 
+
+SLIDE 4
+
+This summarizes the experimental and computational workflow. Libraries were prepared for high-throughput RNA sequencing using the Illumina platform. The reads were aligned to the hg19 assembly of the human genome using the GSNAP program. The FASTQC and RNASeQC programs were used to check read quality. Expression levels and differential expression between Normal and AMD states were estimated using the CUFFLINKS suite, in particular the CUFFQUANT tool, using the annotated gene transcript information for HG19. Further analysis was carried out using the NetPath pathway database, cytoscape and custom programs. 
+
+SLIDE 5
+
+This diagam briefly summarizes the differential expression results for the lncRNA genes annotated in the hg19 assembly. This is for overall differential expression between AMD and normal tissues, irrespective of disease stage. We find 54 lncRNAs with highly significant differential expression, 47 unique to peripheral retina, 2 to PRCS, and 5 common to both tissues. We display the names of the genes in the intersection, and I want to highlight one of particular interest, MEG3.
+
+SLIDE 6
+
+MEG3 is a lncRNA that shows significant differential expression in both tissues. It's been shown to regulate the transforming growth factor beta pathway by a trans mechanism like the one I showed earlier. It acts by guiding the polycomb repressive complex to target GA-rich recognition sequences, where the complex adds repressive chromatin modifications. 
+
+SLIDE 7
+
+This shows the differential expression we observe for MEG3. It is significantly downregulated in AMD compared to normal in both tissue types and in all AMD disease stages. 
+
+SLIDE 8
+
+Here we look at the impact of MEG3 downregulation on the TGF-beta pathway. We used the NetPath database, which includes all the proteins directly in that pathway, and also collects differential expression data for genes known to be affected by the pathway. Of 615 protein coding genes known to be modulated by TGF-beta, 131 are in our differentially expressed set, and most of these show a pattern of differential expression consistent with activation of TGF-beta in AMD. We find 80 genes that are upregulated and 11 downregulated in AMD, in agreement with TGF-beta activation. This supports the proposed regulatory role of the lncRNA MEG3, which represses gene expression, and which we find downregulated in AMD versus normal eyes. 
+
+SLIDE 9
+
+This cytoscape view shows a subset of the proteins directly involved in the TGF-beta pathway, meaning involved in protein-protein complexes or direct regulation. 26 of the coding genes in our differentially-expressed set are directly involved in the pathway, and are highlighted in yellow here. 
+
+SLIDE 10
+
+Some of these have potential functional implications for AMD progression. This table shows the gene ID, protein name, and possible role. All of these are upregulated about 2 fold in AMD versus normal. Caveolins have been implicated in induction of neovascularization and breakdown of blood-retina barrier; Endoglin is associated with TGF-beta receptor complex and is highly expressed during angiogenesis; ETS-1 is a transcription factor known to regulate vascular endothelial growth factor which is critical in retinal neovascularization; LEF-1, another transcription factor also plays a role in the Wnt pathway and induction of angiogenesis. The THG-beta receptor isoforms are themselves upregulated, as is SMAD3, one of the transducers of the TGF-beta signal. 
+
+SLIDE 11
+
+We also searched for potential cis interactions between our differentially expressed lncRNAs and neighboring coding genes. This was done by computing genomic distance between the lncRNA genes and potential regulatory partners, and using a separation threshold of 2000 bases. We focus here on peripheral retina which provided more examples to consider. 
+
+SLIDE 12 
+
+This summarizes the cis interactions that we found. The lncRNA gene symbol is shown alongside the coding neighbor, and the type of cis interaction which we will illustrate in a moment. We also highlight potential functional roles of the coding neighbor. For example, Insulin-like growth factor 2 has been implicated in VEGF regulation and the HEDGEHOG pathway, both of which are important for vascularization and cell proliferation; Deiodinase 3 has been shown to be critical for cone photoreceptor survival; and there are two intermediate filament proteins. One pair is of special interest. Vimentin, is upregulated during neovascularization and is also modulated by the TGF-beta pathway. It's interaction with the neighboring lncRNA VIM-AS1 has already been studied. 
+
+SLIDE 13
+
+VIM and VIM-AS1 are in divergent orientation, VIM on the plus genomic strand and VIM-AS1 on the minus strand. They are transcribed in opposite directions but with different expression levels, and it's been shown that VIM-AS1 enhances the expression of the coding gene. Here we show the pattern of differential expression we find for vimentin and the lncRNA VIM-AS1. Both of these are highly upregulated in AMD versus normal, and expression is most enhanced for the neovascularized disease state, consistent with the role of Vimentin in vascularization, and also with the mechanism of this lncRNA in enhancing expression of the coding gene.
+
+SLIDE 14
+
+Here are two more examples, SETD1B is a methyltransferase involved in epigenetic regulation, this gene and it's coding neighbor are also in divergent orientation. Here we show the differential expression of each of these between AMD and normal. IGF2 is insulin-like growth factor 2; in this case the lncRNA and IGF2 have same-sense but overlapping orientations; they are both highly upregulated in AMD. 
+
+SLIDE 15
+
+Two more examples; calapain 10 is a modulator of calcium signaling with diverse potential functions, it is in divergent orientation with the lncRNA neigjbor, and both of these are downregulated in AMD; Likewise deiodinase-3 and it's neighboring lncRNA are divergent, in this case both upregulated in AMD. 
+
+SLIDE 16
+
+A final example of cis interaction, this is the other intermediate filament protein mentioned, Synamin. It is in antisense orientation to the lncRNA, but with the RNA overlapping an exon of the protein on the opposite strand. Both of these are upregulated in AMD. Notice that the gene expression is here shown at the same scale, and the much smaller level of expression of the lncRNA, which is in fact typical of many of these. 
+
+SLIDE 17
+
+Finally we show three hits to a Genome Wide Association study for AMD. Three of our lncRNAs overlap a GWAS region. 
+
+SLIDE 18
+
+The first is shown here, highlighted in orange. It does not directly overlap any coding genes, but is significantly downregulated in AMD, in both tissue types. 
+
+SLIDE 19
+
+This lncRNA is significantly upregulated in AMD, in both tissue types. It is antisense to Aldolase C, which has been used as a marker for AMD. 
+
+SLIDE 20
+
+Finally, this lncRNA is antisense to Crumbs homolog 1, which has many polymorphisms associated with retinal dystrophies. 
+
+SLIDE 21
+
+To conclude, we found a number of lncRNAs with significant differential expression with both cis and trans potential regulatory roles. The highlights:
+
+* MEG3 acts in trans; it's downregulation leads to activation of the TGF-beta pathway, an important regulator of cell proliferation and angiogenesis. 
+
+* A number of lncRNAs were found with closely neighboring coding genes in a variety of mutual orientations, many with potential roles in AMD progression; coordinated differential expression for the lncRNA and coding neighbor supports the possibility of cis regulation by the lncRNA
+
+* Also, we found three lncRNAs in AMD GWAS regions, two with neighboring coding partners. 
+
+
+ 
+
+
+
+

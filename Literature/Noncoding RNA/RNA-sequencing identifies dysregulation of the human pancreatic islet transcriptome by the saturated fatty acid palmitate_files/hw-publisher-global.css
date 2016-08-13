@@ -1,0 +1,95 @@
+/*****************************************************************
+ * HW-provided Top-level CSS stylesheet for site
+ *
+ * Should contain (or import) all styles used across many pages
+ * within the site, and overrides to HW global CSS stylesheet.
+ *
+ *****************************************************************/
+
+@import url("hw-publisher-sidebars.css");
+
+.cit .cit-extra {
+/*    white-space:nowrap; */
+	text-transform:none;
+	margin-left:0;
+	padding:0;
+	font-size: 1em;
+}
+
+.cit .cit-extra {display:inline-block;}
+
+#pageid-search #content-block legend {
+    background-color:#DBDBDB;
+}
+form#adv-search fieldset, form#adv-search-tables fieldset {
+    border:1px solid #DBDBDB;
+}
+form#adv-search h1, form#adv-search .search-date-range, form#adv-search-tables h1 {
+    color:#666666;
+}
+
+#header .header-qs {top: 120px;}
+#header #hdr-login {height: 122px;}
+
+#footer .footer-group a,
+#footer .footer-group a:hover,
+#footer .footer-group a:visited { color: #FFF; border-bottom: none; }
+#pageid-home .main-block a,
+#pageid-home .main-block a:hover,
+#pageid-home .main-block a:visited { color: #666; border-bottom: none; }
+#pageid-home .main-block .hw-pipe { color: #1F497D; }
+
+
+div.type-figure.odd.pos-float div.fig-inline {
+   max-width: 450px;
+   min-width: 225px;
+}
+
+
+div.fig.odd.pos-float .fig-inline {
+    width: auto;
+}
+
+div#content-block div.fig.odd.pos-float div#play-in-place {
+    padding: 0;
+    margin: 0 -9px
+}
+
+div.article div.fig, div.article .table {
+    margin: 1em 0;
+}
+
+#pageid-report #content-block .cit.openaccess {
+background-color:#FFFFFF;
+}
+#col-3 div.tower-ads { padding-left: 20px; }
+
+#footer .leaderboard-ads-ft {
+    float: left;
+    padding: 23px 125px 16px;
+}
+
+/* PRE-val */
+#col-3 img.pre-icon {
+        display:block;
+        margin: 0 auto 1em;
+        width:55px;
+}
+
+#pageid-content .crossmark-logo {
+	float:left;
+	padding-right:2em;
+}
+
+#pageid-content #pre-details-logo {
+	display:block;
+	padding-top:0.3em;
+}
+
+#pageid-content .article {
+	clear:both;
+}
+
+div.hw-gen-page li.pre-val-placeholder a, div.hw-gen-page li a.req-permissions-js {
+    color:#202088;
+}

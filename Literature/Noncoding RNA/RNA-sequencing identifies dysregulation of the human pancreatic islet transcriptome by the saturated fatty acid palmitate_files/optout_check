@@ -1,0 +1,4 @@
+Krux.ns.ehealthcare.kxjsonp_optOutCheck({
+  status: 200,
+  body: { "_kuid_": "I4oPOfNU" }
+});
